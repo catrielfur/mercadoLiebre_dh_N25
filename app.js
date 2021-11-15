@@ -7,7 +7,9 @@ app.use(express.static('public'));
 
 // process.env.PORT
 
-app.listen(process.env.PORT, ()=>{
+const port = 3000
+
+app.listen(process.env.PORT || port,() => {
     console.log('Servidor funcionando');
 });
 

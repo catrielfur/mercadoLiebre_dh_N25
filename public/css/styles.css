@@ -9,19 +9,38 @@
 body {
     background-color: #ebebeb;
     font-family: 'Roboto', 'sans-serif';
+    width: 100%;
 }
-
+/* Titulares */
 h3 {
     font-size: 24px;
 }
-
+/* Cuerpo de texto */
 p {
     font-size: 12px;
 }
 
+/* Centra la hamburguesa */
+.burger-menu{
+    text-align: center;
+}
+
+/* Le da estilos a la hamburguesa */
+.burger-menu i{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: auto;
+    padding: 10px;
+    max-width: 50px;
+    display: block;
+}
+
 div.top-header {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 5%;
 }
 
@@ -33,24 +52,62 @@ header div.top-header p{
 
 header {
     background-color: #EAC926;
+    padding: 20px;
+}
+
+.main-header-top-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+ 
+}
+
+
+.copy-header {
+    font-size: 12px;
+    font-weight: 400;
+    text-align:center;
+    flex-wrap: nowrap;
+    padding: 20px;
 }
 
 header .form{
-    width: 50%;
-    border: solid 3px rgb(187, 255, 0);
     display: flex;
-    align-items: center;
-    padding: 2px;
-    font-size: 11px;
+    align-items: center;¡
+    /* No se si se tiene que ver o no */
+    /* display: none; */
 
 }
 
-header div.logo{
+header .form .input {
+    background-color: white;
+    border-top: 1px solid rgb(207, 206, 206);
+    border-left: 1px solid rgb(207, 206, 206);
+    border-bottom: 1px solid rgb(207, 206, 206);
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+}
+
+header .form i {
+    border-top: 1px solid rgb(207, 206, 206);
+    border-right: 1px solid rgb(207, 206, 206);
+    border-bottom: 1px solid rgb(207, 206, 206);
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+    padding: 13px 13px 10px 0;
+    background-color: white;
+    color: rgb(177, 174, 174);
+}
+
+header .logo{
     padding: 10px;
     width: 50%;
 }
 
 header nav{
+    display: block;
     font-size: 12px;
     margin-left: 20px;
 }
@@ -58,48 +115,22 @@ header nav{
 /* Sirve para quitarle los puntos a los ul */
 header ul li{
     list-style-type: none;
+    margin:0;
+    padding:0;
+}
+/* Para ocultar la barra en mobile */
+.main-navbar{
+    display: none;
 }
 
 /* Le da color a las letras del nav */
-header ul li a{
+.main-navbar a{
     text-decoration: none;
-    color: #000;
-}
+    color: #222222;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
 
-header .form .input{
-    background-color: white;
-    border: solid 1px #000;
-    border-radius: 20px;
-    font-size: 20px;
-    outline: none;
-    color: #666;
-    padding: 20px;
-    width: 100%;
-    /* padding: 6px 6px 6px 35px; */
- }
-
-header .form-submit{
-    background-color: #FFF;
-    color: #666;
-    border: 1px solid #000;
-    width: 5%;
-    border: solid 3px violet;
-}
-/* Centra la hamburguesa */
-div.burger-menu{
-    text-align: center;
-}
-
-/* Le da estilos a la hamburguesa */
-div.burger-menu i{
-    background-color: #0044AA;
-    border-radius: 5px;
-    color: #FFF;
-    font-size: 20px;
-    height: 40px;
-    margin: 10px 0px 20px 0px;
-    padding: 10px;
-    width: 40px;
 }
 
 div.last-visit,
@@ -114,7 +145,7 @@ div.offers{
 }
 
 .discount{
-    width: 70%;
+    width: 60%;
 }
 
 .discount, .description{
@@ -132,8 +163,8 @@ h3,
     margin-top: 20px;
 }
 
-section.banner.img{
-    width:100%;
+.banner {
+    width: 100%;
 }
 
 main{
@@ -165,7 +196,7 @@ main section article i{
     border: 1px solid #39b54a;
     background-color: #FFF;
     border-radius: 50%;
-    position: absolute;
+    position: absolute; 
     right: 20px;
     top: -15px;
 }
@@ -191,6 +222,7 @@ article div.main-article{
     border-top: 1px solid #ebebeb;
     position: relative;
     padding: 15px;
+    justify-content: space-between;
 }
 
 footer {
@@ -199,39 +231,12 @@ footer {
 
 }
 
-.fas.fa-credit-card {
+footer i {
     color: blue;
     font-size: 2em;
+    padding: 0 0 30px 0;  
 }
-.pagos {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.fas.fa-gift {
-    color: blue;
-    font-size: 2em;
-}
-.envios {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.fas.fa-user-shield{
-    color: blue;
-    font-size: 2em;
-    
-}
-.seguridad {
-        font-size: 16px;
-        font-weight: bold; 
-}
-
-.data{
-    border: solid 2px red;
-    padding-bottom: 10px;
-}
-
+/* Width superiores son para tablet */
 @media (min-width: 361px){
     main section article .description{
         display: block;
@@ -257,11 +262,137 @@ footer {
     .discount{
         width: 50%;
     }
-}
 
-@media (min-width: 769px){
+    .main-navbar{
+        display: contents;
+    }
+
+    header .logo {
+        width: 30%;
+    }
+
+    header .form .input {
+        width: 30%;
+    }
+
+    h2.copy-header {
+        width: 30%;
+        display: flex;
+    
+    }
+
+    .main-header-top-bar {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 0 10px 0;
+    }
+
+    .main-navbar ul {
+        display: flex;
+        font-size: 10px;
+            
+    }
+
+    .main-navbar li {
+     margin: 0 5px;
+    }
+}
+/* Width superiores son para laptop */
+@media (min-width: 768px){
+
+    .logo {
+        width: 200px;
+        margin: 15px;
+    }
+
+    .main-header-top-bar{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .copy-header {
+        max-width: 350px;
+        text-align: right;
+
+    }
+
+    .main-navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .burger-menu {
+        display: none;
+    }
+
+    .main-navbar ul {
+        display: flex;
+    }
+
+    .main-navbar li {
+     margin: 0 5px;
+    }
+
+    header .form{
+        display: flex;
+        align-items: center;
+        /* No se si se tiene que ver o no */
+        display: flex;
+    
+    }
+
     main section div.products article{
         width: 22%;
+    }
+
+}
+
+@media (min-width: 1200px){
+    .logo {
+        width: 250px;
+    }
+
+
+    .main-header-top-bar, .main-navbar{
+        max-width: 1200px;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    .main-header-top-bar {
+        align-items: center;
+    }
+
+    .form {
+        margin: auto;
+    }
+
+    .main-navbar {
+        margin-top: 20px;
+       }
+
+    .main-navbar li {
+        margin: 0 10px;
+       }
+
+    .main-navbar a {
+       font-size: 20px;
+       }
+
+    .copy-header {
+        max-width: none;
+        font-size: 22px;
+        margin: 0;
+        
+    }
+
+    main section div.products article {
+        width: 18%;
+        display: inline-block;
+        justify-content: space-between;
+       margin: 0 30px;
     }
 }
     
